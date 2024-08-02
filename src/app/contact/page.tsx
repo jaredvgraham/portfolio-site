@@ -8,10 +8,10 @@ const page = () => {
     <>
       <section className="mt-8 flex flex-col items-center">
         <h2 className="text-3xl font-semibold text-gray-300 text-center">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <p className="text-lg mt-4 text-gray-400 ">
-          Let's create something amazing together!
+          Let&apos;s create something amazing together!
         </p>
 
         <p className="text-gray-400">Email: jaredvgraham@gmail.com</p>

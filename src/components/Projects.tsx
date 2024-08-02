@@ -69,7 +69,10 @@ const projectLinks = [
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
   return (
     <div className="flex flex-col items-center p-10">
       <motion.h1
@@ -82,11 +85,6 @@ const Projects = () => {
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
         {projectLinks.map((project, index) => {
-          const [ref, inView] = useInView({
-            threshold: 0.1,
-            triggerOnce: true,
-          });
-
           return (
             <motion.div
               key={project.id}
