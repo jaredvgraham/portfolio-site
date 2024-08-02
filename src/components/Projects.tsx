@@ -6,7 +6,7 @@ import Image from "next/image"; // Import Next.js Image component
 
 const itemVariants = {
   hidden: { opacity: 0, x: 100 },
-  visible: { opacity: 1, x: 0 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut" } },
 };
 
 const projectLinks = [
@@ -66,13 +66,91 @@ const projectLinks = [
     gitHub: "/projects",
   },
 ];
+type Props = {
+  project: {
+    id: number;
+    title: string;
+    url: string;
+    imgSrc: string;
+    description: string;
+    videoUrl: string;
+    gitHub: string;
+  };
+  index: number;
+};
+
+const ProjectItem = ({ project, index }: Props) => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <motion.div
+      ref={ref}
+      className="relative bg-white white-shadow-lg rounded-lg shadow-lg overflow-hidden"
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={itemVariants}
+      transition={{ delay: index * 0.2 }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div className="relative w-full h-full">
+        <Image
+          src={project.imgSrc}
+          alt={project.title}
+          width={400}
+          height={200}
+          className="rounded-lg"
+        />
+      </div>
+      {hovered && (
+        <div className="absolute inset-0 bg-black bg-opacity-85 flex flex-col justify-center items-center text-white p-4">
+          <h2 className="text-xl mb-2">{project.title}</h2>
+          <p className="mb-4 text-center">{project.description}</p>
+          <div className="flex space-x-4">
+            <ul className="flex space-x-4">
+              <li>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  Live Site
+                </a>
+              </li>
+              <li>
+                <a
+                  href={project.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  Video Demo
+                </a>
+              </li>
+              <li>
+                <a
+                  href={project.gitHub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
+      <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-2">
+        <h2 className="text-gray-800 text-center">{project.title}</h2>
+      </div>
+    </motion.div>
+  );
+};
 
 const Projects = () => {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
   return (
     <div className="flex flex-col items-center p-10">
       <motion.h1
@@ -84,74 +162,9 @@ const Projects = () => {
         My Apps
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
-        {projectLinks.map((project, index) => {
-          return (
-            <motion.div
-              key={project.id}
-              ref={ref}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={itemVariants}
-              transition={{ duration: 1, ease: "easeInOut" }}
-              className="relative bg-white white-shadow-lg rounded-lg shadow-lg overflow-hidden"
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={project.imgSrc}
-                  alt={project.title}
-                  width={400}
-                  height={200}
-                  className="rounded-lg"
-                />
-              </div>
-              {hoveredProject === project.id && (
-                <div className="absolute inset-0 bg-black bg-opacity-85 flex flex-col justify-center items-center text-white p-4">
-                  <h2 className="text-xl mb-2">{project.title}</h2>
-                  <p className="mb-4 text-center">{project.description}</p>
-                  <div className="flex space-x-4">
-                    <ul className="flex space-x-4">
-                      <li>
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-500 hover:underline"
-                        >
-                          Live Site
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href={project.videoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-500 hover:underline"
-                        >
-                          Video Demo
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href={project.gitHub}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-500 hover:underline"
-                        >
-                          GitHub
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              )}
-              <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-2">
-                <h2 className="text-gray-800 text-center">{project.title}</h2>
-              </div>
-            </motion.div>
-          );
-        })}
+        {projectLinks.map((project, index) => (
+          <ProjectItem key={project.id} project={project} index={index} />
+        ))}
       </div>
     </div>
   );
