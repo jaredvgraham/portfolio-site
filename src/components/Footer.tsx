@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -45,6 +46,21 @@ const Footer = () => {
           </a>
           .
         </p>
+        <p className="p-2">Quick Links:</p>
+        <div className="flex gap-4">
+          <Link href="/" className="text-white hover:underline">
+            Home
+          </Link>
+          <Link href="/about" className="text-white hover:underline">
+            About
+          </Link>
+          <Link href="/projects" className="text-white hover:underline">
+            Projects
+          </Link>
+          <Link href="/contact" className="text-white hover:underline">
+            Contact
+          </Link>
+        </div>
       </div>
     </footer>
   );

@@ -45,7 +45,6 @@ const page = () => {
       <Projects />
       <AboutMe />
       <ContactForm />
-      <Footer />
     </>
   );
 };

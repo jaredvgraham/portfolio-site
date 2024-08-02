@@ -32,7 +32,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen text-gray-300 p-4 ">
+    <div className="flex flex-col items-center m-2  text-gray-300 p-4 ">
       <div className="sm:w-11/12 md:w-2/3  white-shadow-md rounded-lg p-8">
         <h1 className="text-5xl font-bold text-center text-gray-300">
           Contact Me
