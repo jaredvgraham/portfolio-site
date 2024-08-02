@@ -40,7 +40,6 @@ const page = () => {
   // }, [isMobile, isReallySmall]);
   return (
     <>
-      <Navbar />
       <ScrollAnimationPage />
       <Projects />
       <AboutMe />

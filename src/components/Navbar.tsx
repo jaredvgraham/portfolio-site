@@ -4,15 +4,14 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-black p-4 border-slate-600  border-b w-full">
+    <nav className="bg-black p-4 border-slate-600  border-b w-full white-shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2" />
-        </div>
-        <div className="space-x-4">
-          <Link href="/" className="text-slate-200">
-            Home
+          <Link className="text-slate-200" href="/">
+            Jared Graham
           </Link>
+        </div>
+        <div className="flex justify-around w-1/2">
           <Link href="/about" className="text-slate-200">
             About
           </Link>
