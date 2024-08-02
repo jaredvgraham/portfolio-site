@@ -12,12 +12,13 @@ const ProjectsPage = () => {
       imgSrc: "/bizzy-task.png",
       description: "A task management app with AI integration",
       inDepthDescription:
-        "This app helps businesses manage their tasks efficiently with AI integration. It allows for task assignment, progress tracking, and AI-powered task suggestions.",
-      techStack: "React, Node.js, Express, MongoDB, OpenAI API",
+        "This app helps businesses manage their tasks efficiently with AI integration. It allows for organizing categories to tasks to descriptions, progress tracking, team collaboration and AI-powered generative templates based on the prompt about their business.",
+      techStack:
+        "Next.js, Typescript, Tailwind, Firestore, Webhooks OpenAI API",
       usefulness:
         "Improves task management and productivity in business environments.",
       developmentProcess:
-        "The app was built using React for the frontend and Node.js for the backend. MongoDB was used for the database, and the OpenAI API was integrated for AI functionalities.",
+        "The app was built with HTTPS only Cookies authentication, Firestore for database management, and OpenAI API for AI integration. Webhooks were used to trigger real time team collaboration. React context was used for state management. The app was deployed on Vercel for optimized performance and scalability.",
       videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
       gitHub: "https://github.com/jaredvgraham/bizzyTask",
     },
@@ -28,8 +29,8 @@ const ProjectsPage = () => {
       imgSrc: "/applyFrame.png",
       description: "A job application tracker and AI resume builder/tailoring",
       inDepthDescription:
-        "This app helps users track their job applications and tailor their resumes for each application using AI.",
-      techStack: "React, Node.js, Express, MongoDB, OpenAI API",
+        "This app enables users to efficiently track their job applications and customize their resumes according to specific job descriptions. The customization process involves uploading their resume, which is then captured as a screenshot using Puppeteer for web scraping. This image is stored in a Firebase storage bucket and saved to a Mongoose database. Users can upload a job description from any tracked application, which is sent to the OpenAI API to generate a tailored resume in HTML format. This HTML is then converted into a downloadable PDF, providing a seamless and personalized resume optimization experience. The Puppeteer service is hosted on Render, and the app is deployed on Vercel.",
+      techStack: "Next.js, Typescript, Tailwind, MongoDB, OpenAI API",
       usefulness:
         "Streamlines the job application process and enhances resume customization.",
       developmentProcess:
@@ -44,8 +45,8 @@ const ProjectsPage = () => {
       imgSrc: "/bsites.png",
       description: "My freelance web development website",
       inDepthDescription:
-        "A portfolio website showcasing my freelance web development projects and services.",
-      techStack: "Next.js, Tailwind CSS, Vercel",
+        "A bussiness my friend and I started to help clients with their web development needs. We offer a variety of services including web design, web development, and SEO optimization all they can purchase directly from the website using Stripe.",
+      techStack: "Next.js, Tailwind CSS, MongoDB, Stripe",
       usefulness:
         "Helps potential clients learn about my services and see examples of my work.",
       developmentProcess:
@@ -62,10 +63,10 @@ const ProjectsPage = () => {
         "A dating app with a matching algorithm but the app is not live",
       inDepthDescription:
         "A dating app designed with a unique matching algorithm to connect compatible users.",
-      techStack: "React Native, Firebase, Node.js",
+      techStack: "React, PostgreSQL, Spring Boot, Java",
       usefulness: "Enhances user experience in finding compatible matches.",
       developmentProcess:
-        "Developed using React Native for cross-platform compatibility, Firebase for backend services, and Node.js for server-side logic.",
+        "This app I built with a friend I wrote the front end in React and he wrote the back end in Java using Spring Boot. We used a PostgreSQL database to store user information and match them based on their preferences.",
       videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
       gitHub: "https://github.com/jaredvgraham/dating-app",
     },
@@ -77,11 +78,11 @@ const ProjectsPage = () => {
       description: "A car detailing website I built for a client",
       inDepthDescription:
         "A professional website for a car detailing business, showcasing services and allowing online bookings.",
-      techStack: "WordPress, HTML, CSS, JavaScript",
+      techStack: "Next.js, Tailwind CSS",
       usefulness:
         "Increases online presence and allows customers to book detailing services online.",
       developmentProcess:
-        "Developed with WordPress for easy content management and custom HTML, CSS, and JavaScript for unique functionality.",
+        "Developed with Next.js for server-side rendering and Tailwind CSS for styling. Deployed on Vercel for optimized performance and scalability.",
       videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
       gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
     },

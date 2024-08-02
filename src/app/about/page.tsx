@@ -40,8 +40,8 @@ const AboutPage = () => {
           </h2>
           <p className="text-lg mt-4 text-gray-400">
             I&apos;m a passionate web developer with a deep love for creating
-            seamless, dynamic web applications. Over the past year, I have honed
-            my skills in HTML, CSS, JavaScript, and Next.js, building a
+            seamless, dynamic web applications. I have worked relentlessly to
+            hone my skills in HTML, CSS, JavaScript, and Next.js, building a
             portfolio that showcases my ability to tackle both frontend and
             backend development with proficiency.
           </p>
@@ -56,12 +56,12 @@ const AboutPage = () => {
         >
           <h2 className="text-3xl font-semibold text-gray-300">Recent Work</h2>
           <p className="text-lg mt-4 text-gray-400">
-            In my recent work, I&apos;ve developed a full-stack task management
-            app using Next.js, demonstrating my knack for creating
+            In my recent work, I&apos;ve developed a full-stack business task
+            management app using Next.js, demonstrating my knowlage for creating
             user-friendly, efficient web applications. I&apos;ve also integrated
-            AI-powered features into various projects, like my job application
-            management tool, which streamlines and enhances the job search
-            process.
+            AI-powered features into various projects, like the task managment
+            app, and my job application management tool, which streamlines and
+            enhances the job search process.
           </p>
         </motion.section>
 
@@ -77,10 +77,11 @@ const AboutPage = () => {
           </h2>
           <p className="text-lg mt-4 text-gray-400">
             My approach to development is rooted in a strong work ethic,
-            creativity, and a relentless drive to learn and grow. I believe in
-            the power of visually appealing and intuitive interfaces, and I
-            strive to ensure that every project I undertake prioritizes the user
-            experience.
+            creativity, taking ownership in my work, and a strong drive to learn
+            and grow. I believe that every project is an opportunity to learn
+            something new and to push the boundaries of what I can achieve.
+            I&apos;m always looking for ways to improve my skills and to create
+            innovative solutions that make a difference.
           </p>
         </motion.section>
 
@@ -95,11 +96,13 @@ const AboutPage = () => {
             Background and Expertise
           </h2>
           <p className="text-lg mt-4 text-gray-400">
-            My background has equipped me with the ability to bring innovative
-            solutions to real-world problems, and I&apos;m excited to bring this
-            energy and expertise to every project I work on. I&apos;m eager to
-            connect with like-minded professionals and explore new opportunities
-            where I can contribute my skills and enthusiasm.
+            My background is grounded in a strong foundation of web development
+            starting my journey with HTML, CSS, and JavaScript. I have since
+            expanded my expertise to include modern web technologies like React,
+            Next.js, and Tailwind CSS, MongoDB and Firebase. I have also delved
+            into a full backend approach to development with Node.js and
+            express, allowing me to create full-stack applications that are both
+            visually appealing and highly functional.
           </p>
         </motion.section>
 
