@@ -18,7 +18,7 @@ const ProjectsPage = () => {
       usefulness:
         "Improves task management and productivity in business environments.",
       developmentProcess:
-        "The app was built with HTTPS only Cookies authentication, Firestore for database management, and OpenAI API for AI integration. Webhooks were used to trigger real time team collaboration. React context was used for state management. The app was deployed on Vercel for optimized performance and scalability.",
+        "The app was built with HTTP only Cookies authentication, Firestore for database management, and OpenAI API for AI integration. Webhooks were used to trigger real time team collaboration. React context was used for state management. The app was deployed on Vercel for optimized performance and scalability.",
       videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
       gitHub: "https://github.com/jaredvgraham/bizzyTask",
     },

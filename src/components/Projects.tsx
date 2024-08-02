@@ -108,7 +108,7 @@ const ProjectItem = ({ project, index }: Props) => {
           <h2 className="text-xl mb-2">{project.title}</h2>
           <p className="mb-4 text-center">{project.description}</p>
           <div className="flex space-x-4">
-            <ul className="flex space-x-4">
+            <ul className="flex space-x-4 mb-5">
               <li>
                 <a
                   href={project.url}
