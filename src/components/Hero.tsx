@@ -61,7 +61,7 @@ const ScrollAnimationPage = () => {
           opacity: 0,
         }}
         animate={{ rotate: "0", scale: 1, opacity: 1 }}
-        transition={{ duration: 1, type: "spring", stiffness: 40 }}
+        transition={{ duration: 3.5, type: "spring", stiffness: 45 }}
       >
         <ContainerScroll
           titleComponent={
@@ -73,7 +73,7 @@ const ScrollAnimationPage = () => {
         >
           <main className="p-10 bg-black flex flex-col justify-between ">
             <h2 className="text-slate-300 text-3xl text-center">Skills</h2>
-            {/* Add more content to make the scroll effect visible */}
+
             <div
               className={`mt-10 flex justify-between ${
                 isReallySmall && "justify-center"

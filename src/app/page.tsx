@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import SocialMediaLinks from "@/components/SMLinks";
 import AboutMe from "@/components/AboutMe";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 const page = () => {
   // const [isMobile, setIsMobile] = React.useState<boolean>(false);
@@ -44,6 +45,7 @@ const page = () => {
       <Projects />
       <AboutMe />
       <ContactForm />
+      <Footer />
     </>
   );
 };

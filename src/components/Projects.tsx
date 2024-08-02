@@ -60,7 +60,7 @@ const projectLinks = [
     id: 6,
     title: "Learn More",
     url: "/projects",
-    imgSrc: "/learn-more.png",
+    imgSrc: "/read-more.png",
     description: "Read more about my projects",
     videoUrl: "/projects",
     gitHub: "/projects",

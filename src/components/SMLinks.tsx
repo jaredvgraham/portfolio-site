@@ -17,7 +17,7 @@ const SocialMediaLinks = () => (
       <FaLinkedin className="text-white" />
     </a>
     <a
-      href="https://twitter.com/yourusername"
+      href="https://twitter.com/jaredcodesstuff"
       target="_blank"
       rel="noopener noreferrer"
     >

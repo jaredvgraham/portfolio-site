@@ -99,10 +99,10 @@ const AboutPage = () => {
             My background is grounded in a strong foundation of web development
             starting my journey with HTML, CSS, and JavaScript. I have since
             expanded my expertise to include modern web technologies like React,
-            Next.js, and Tailwind CSS, MongoDB and Firebase. I have also delved
-            into a full backend approach to development with Node.js and
-            express, allowing me to create full-stack applications that are both
-            visually appealing and highly functional.
+            Next.js, Tailwind CSS, MongoDB and Firebase. I have also delved into
+            a full backend approach to development with Node.js and express,
+            allowing me to create full-stack applications that are both visually
+            appealing and highly functional.
           </p>
         </motion.section>
 
