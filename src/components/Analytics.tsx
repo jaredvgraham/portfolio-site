@@ -3,16 +3,15 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { analytics, logEvent } from "../lib/firebase";
 
 export default function Analytics() {
   const pathname = usePathname();
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      if (typeof window.gtag === "function") {
-        window.gtag("config", "G-RDBNB3Q3XS", {
-          page_path: url,
-        });
+      if (analytics) {
+        logEvent(analytics, "page_view", { page_path: url });
       }
     };
 
