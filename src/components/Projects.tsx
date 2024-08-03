@@ -16,7 +16,7 @@ const projectLinks = [
     url: "https://bizzy-task.vercel.app/",
     imgSrc: "/bizzy-task.png",
     description: "A task management app with AI integration",
-    videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+    videoUrl: "https://youtu.be/UlgvA3kXimU",
     gitHub: "https://github.com/jaredvgraham/bizzyTask",
   },
   {
@@ -25,7 +25,7 @@ const projectLinks = [
     url: "https://apply-frame.vercel.app/",
     imgSrc: "/applyFrame.png",
     description: "A job application tracker and AI resume builder/tailoring",
-    videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+    videoUrl: "https://youtu.be/tasZs_QQkdo",
     gitHub: "https://github.com/jaredvgraham/apply-frame",
   },
   {
@@ -34,17 +34,17 @@ const projectLinks = [
     url: "https://www.bsites.io/",
     imgSrc: "/bsites.png",
     description: "My freelance web development website",
-    videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+
     gitHub: "https://github.com/jaredvgraham/top-of-the-web",
   },
   {
     id: 4,
     title: "Dating App (Not Live)",
-    url: "https://www.bsites.io/",
+
     imgSrc: "/dating-app.png",
     description:
       "A dating app with a matching algorithm but the app is not live",
-    videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+
     gitHub: "https://github.com/jaredvgraham/dating-app",
   },
   {
@@ -53,7 +53,7 @@ const projectLinks = [
     url: "https://www.jakecleanscars.com/",
     imgSrc: "/jake.png",
     description: "A car detailing website I built for a client",
-    videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+
     gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
   },
   {
@@ -70,10 +70,10 @@ type Props = {
   project: {
     id: number;
     title: string;
-    url: string;
+    url?: string;
     imgSrc: string;
     description: string;
-    videoUrl: string;
+    videoUrl?: string | null;
     gitHub: string;
   };
   index: number;
@@ -110,24 +110,28 @@ const ProjectItem = ({ project, index }: Props) => {
           <div className="flex space-x-4">
             <ul className="flex space-x-4 mb-5">
               <li>
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  Live Site
-                </a>
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    Live Site
+                  </a>
+                )}
               </li>
               <li>
-                <a
-                  href={project.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  Video Demo
-                </a>
+                {project.videoUrl && (
+                  <a
+                    href={project.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    Video Demo
+                  </a>
+                )}
               </li>
               <li>
                 <a

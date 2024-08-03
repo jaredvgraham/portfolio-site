@@ -19,7 +19,7 @@ const ProjectsPage = () => {
         "Improves task management and productivity in business environments.",
       developmentProcess:
         "The app was built with HTTP only Cookies authentication, Firestore for database management, and OpenAI API for AI integration. Webhooks were used to trigger real time team collaboration. React context was used for state management. The app was deployed on Vercel for optimized performance and scalability.",
-      videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+      videoUrl: "https://youtu.be/UlgvA3kXimU",
       gitHub: "https://github.com/jaredvgraham/bizzyTask",
     },
     {
@@ -35,7 +35,7 @@ const ProjectsPage = () => {
         "Streamlines the job application process and enhances resume customization.",
       developmentProcess:
         "The project involved creating a user-friendly interface with React and handling backend operations with Node.js and MongoDB. The OpenAI API was used for AI-driven resume tailoring.",
-      videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+      videoUrl: "https://youtu.be/tasZs_QQkdo",
       gitHub: "https://github.com/jaredvgraham/apply-frame",
     },
     {
@@ -51,13 +51,13 @@ const ProjectsPage = () => {
         "Helps potential clients learn about my services and see examples of my work.",
       developmentProcess:
         "Built with Next.js for server-side rendering and Tailwind CSS for styling. Deployed on Vercel for optimized performance and scalability.",
-      videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+
       gitHub: "https://github.com/jaredvgraham/top-of-the-web",
     },
     {
       id: 4,
       title: "Dating App (Not Live)",
-      url: "https://www.bsites.io/",
+
       imgSrc: "/dating-app.png",
       description:
         "A dating app with a matching algorithm but the app is not live",
@@ -67,7 +67,7 @@ const ProjectsPage = () => {
       usefulness: "Enhances user experience in finding compatible matches.",
       developmentProcess:
         "This app I built with a friend I wrote the front end in React and he wrote the back end in Java using Spring Boot. We used a PostgreSQL database to store user information and match them based on their preferences.",
-      videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+
       gitHub: "https://github.com/jaredvgraham/dating-app",
     },
     {
@@ -83,7 +83,7 @@ const ProjectsPage = () => {
         "Increases online presence and allows customers to book detailing services online.",
       developmentProcess:
         "Developed with Next.js for server-side rendering and Tailwind CSS for styling. Deployed on Vercel for optimized performance and scalability.",
-      videoUrl: "https://www.youtube.com/watch?v=8Jjzv1QJ1zA",
+
       gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
     },
   ];
@@ -117,14 +117,17 @@ const ProjectsPage = () => {
             <div>
               <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
               <p className="text-gray-400 mb-4">{project.description}</p>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-500 hover:underline mb-4 block"
-              >
-                Visit Live Site
-              </a>
+              {project.url && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-500 hover:underline mb-4 block"
+                >
+                  Visit Live Site
+                </a>
+              )}
+
               <a
                 href={project.gitHub}
                 target="_blank"
@@ -133,14 +136,16 @@ const ProjectsPage = () => {
               >
                 View on GitHub
               </a>
-              <a
-                href={project.videoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-500 hover:underline mb-4 block"
-              >
-                Watch Video Demo
-              </a>
+              {project.videoUrl && (
+                <a
+                  href={project.videoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-500 hover:underline mb-4 block"
+                >
+                  Watch Video Demo
+                </a>
+              )}
             </div>
           </div>
           <div className="mt-8">
