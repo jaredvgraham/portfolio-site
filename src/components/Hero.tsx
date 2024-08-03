@@ -122,7 +122,7 @@ const ScrollAnimationPage = () => {
           >
             <Image
               src="/html.svg"
-              alt="react-logo"
+              alt="html-logo"
               width={58}
               height={58}
               className="mx-auto white-shadow-lg  "
@@ -132,14 +132,14 @@ const ScrollAnimationPage = () => {
               alt="react-logo"
               width={55}
               height={55}
-              className="mx-auto white-shadow-lg mt-1 "
+              className="mx-auto white-shadow-lg mt-0 md:mt-1 "
             />
             <Image
               src="/javascript.svg"
               alt="react-logo"
               width={55}
               height={55}
-              className="mx-auto white-shadow-lg mt-1 "
+              className="mx-auto white-shadow-lg mt-0 md:mt-1 "
             />
 
             <Image
@@ -147,7 +147,7 @@ const ScrollAnimationPage = () => {
               alt="react-logo"
               width={55}
               height={55}
-              className="mx-auto white-shadow-lg mt-1 "
+              className="mx-auto white-shadow-lg mt-0 md:mt-1  "
             />
             <Image
               src="/react.svg"
