@@ -15,3 +15,4 @@ const app = initializeApp(firebaseConfig);
 const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
 
 export { analytics, logEvent };
+//
