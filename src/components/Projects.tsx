@@ -47,15 +47,15 @@ const projectLinks = [
 
     gitHub: "https://github.com/jaredvgraham/dating-app",
   },
-  {
-    id: 5,
-    title: "Car Detailing Website",
-    url: "https://www.jakecleanscars.com/",
-    imgSrc: "/jake.png",
-    description: "A car detailing website I built for a client",
+  // {
+  //   id: 5,
+  //   title: "Car Detailing Website",
+  //   url: "https://www.jakecleanscars.com/",
+  //   imgSrc: "/jake.png",
+  //   description: "A car detailing website I built for a client",
 
-    gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
-  },
+  //   gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
+  // },
   {
     id: 6,
     title: "Learn More",
