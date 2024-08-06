@@ -14,7 +14,7 @@ const ProjectsPage = () => {
       inDepthDescription:
         "This app helps businesses manage their tasks efficiently with AI integration. It allows for organizing categories to tasks to descriptions, progress tracking, team collaboration and AI-powered generative templates based on the prompt about their business.",
       techStack:
-        "Next.js, Typescript, Tailwind, Firestore, Webhooks OpenAI API",
+        "Next.js, Typescript, Tailwind, Firestore, Webhooks, OpenAI API",
       usefulness:
         "Improves task management and productivity in business environments.",
       developmentProcess:
