@@ -70,22 +70,22 @@ const ProjectsPage = () => {
 
       gitHub: "https://github.com/jaredvgraham/dating-app",
     },
-    {
-      id: 5,
-      title: "Car Detailing Website",
-      url: "https://www.jakecleanscars.com/",
-      imgSrc: "/jake.png",
-      description: "A car detailing website I built for a client",
-      inDepthDescription:
-        "A professional website for a car detailing business, showcasing services and allowing online bookings.",
-      techStack: "Next.js, Tailwind CSS",
-      usefulness:
-        "Increases online presence and allows customers to book detailing services online.",
-      developmentProcess:
-        "Developed with Next.js for server-side rendering and Tailwind CSS for styling. Deployed on Vercel for optimized performance and scalability.",
+    // {
+    //   id: 5,
+    //   title: "Car Detailing Website",
+    //   url: "https://www.jakecleanscars.com/",
+    //   imgSrc: "/jake.png",
+    //   description: "A car detailing website I built for a client",
+    //   inDepthDescription:
+    //     "A professional website for a car detailing business, showcasing services and allowing online bookings.",
+    //   techStack: "Next.js, Tailwind CSS",
+    //   usefulness:
+    //     "Increases online presence and allows customers to book detailing services online.",
+    //   developmentProcess:
+    //     "Developed with Next.js for server-side rendering and Tailwind CSS for styling. Deployed on Vercel for optimized performance and scalability.",
 
-      gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
-    },
+    //   gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
+    // },
   ];
 
   return (
