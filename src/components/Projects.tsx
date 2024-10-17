@@ -12,6 +12,15 @@ const itemVariants = {
 const projectLinks = [
   {
     id: 1,
+    title: "Sales Prospecting SAAS",
+    url: "https://sale-sphere.vercel.app/",
+    imgSrc: "/sales.png",
+    description: "A sales prospecting SAAS with AI integration",
+    videoUrl: "https://youtu.be/UlgvA3kXimU",
+    gitHub: "https://github.com/jaredvgraham/SaleSphere",
+  },
+  {
+    id: 2,
     title: "Business Task Manager",
     url: "https://bizzy-task.vercel.app/",
     imgSrc: "/bizzy-task.png",

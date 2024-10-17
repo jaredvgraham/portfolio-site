@@ -7,85 +7,102 @@ const ProjectsPage = () => {
   const projectLinks = [
     {
       id: 1,
-      title: "Business Task Manager",
-      url: "https://bizzy-task.vercel.app/",
-      imgSrc: "/bizzy-task.png",
-      description: "A task management app with AI integration",
-      inDepthDescription:
-        "This app helps businesses manage their tasks efficiently with AI integration. It allows for organizing categories to tasks to descriptions, progress tracking, team collaboration and AI-powered generative templates based on the prompt about their business.",
+      title: "Sales Prospecting SAAS",
+      url: "https://sale-sphere.vercel.app/",
+      imgSrc: "/sales.png",
+      description: "A sales prospecting SAAS with AI integration",
+      inDepthDescription: [
+        "Automatically finds thousands of companies similar to a user-inputted root company.",
+        "Retrieves key details like company website, LinkedIn profile, relationships to the root company, data from Wikipedia API, number of employees, annual revenue, number of locations.",
+        "Identifies nearby companies and key people, such as C-level executives.",
+        "Provides company location details, products, and services.",
+        "Allows for iterative searches to discover more related companies from initial findings.",
+        "Generates customized email templates based on user business and company data.",
+        "Stores contact details and other information for future use.",
+        "Subscription plans (Basic, Standard, Premium) managed through Stripe's API.",
+      ],
       techStack:
-        "Next.js, Typescript, Tailwind, Firestore, Webhooks, OpenAI API",
+        "Next.js, Typescript, Tailwind, Mongo, OpenAI API, Google Search API, Wikipedia API, Stripe",
       usefulness:
-        "Improves task management and productivity in business environments.",
+        "Enhances sales prospecting by automating company discovery and outreach.",
       developmentProcess:
-        "The app was built with HTTP only Cookies authentication, Firestore for database management, and OpenAI API for AI integration. Webhooks were used to trigger real time team collaboration. React context was used for state management. The app was deployed on Vercel for optimized performance and scalability.",
+        "Built with Next.js, Firestore for database, and integrated with Stripe for payments.",
       videoUrl: "https://youtu.be/UlgvA3kXimU",
       gitHub: "https://github.com/jaredvgraham/bizzyTask",
     },
     {
       id: 2,
+      title: "Business Task Manager",
+      url: "https://bizzy-task.vercel.app/",
+      imgSrc: "/bizzy-task.png",
+      description: "A task management app with AI integration",
+      inDepthDescription: [
+        "Organizes tasks into categories, descriptions, and tracks progress.",
+        "AI-powered templates generate task plans based on business prompts.",
+        "Enables team collaboration in real-time using webhooks.",
+        "Provides a progress dashboard and task status overview for enhanced productivity.",
+      ],
+      techStack:
+        "Next.js, Typescript, Tailwind, Firestore, Webhooks, OpenAI API",
+      usefulness:
+        "Improves task management and productivity in business environments.",
+      developmentProcess:
+        "Built with Next.js, Firestore for data management, and integrated with OpenAI API.",
+      videoUrl: "https://youtu.be/UlgvA3kXimU",
+      gitHub: "https://github.com/jaredvgraham/bizzyTask",
+    },
+    {
+      id: 3,
       title: "Job Application Tracker",
       url: "https://apply-frame.vercel.app/",
       imgSrc: "/applyFrame.png",
       description: "A job application tracker and AI resume builder/tailoring",
-      inDepthDescription:
-        "This app enables users to efficiently track their job applications and customize their resumes according to specific job descriptions. The customization process involves uploading their resume, which is then captured as a screenshot using Puppeteer for web scraping. This image is stored in a Firebase storage bucket and saved to a Mongoose database. Users can upload a job description from any tracked application, which is sent to the OpenAI API to generate a tailored resume in HTML format. This HTML is then converted into a downloadable PDF, providing a seamless and personalized resume optimization experience. The Puppeteer service is hosted on Render, and the app is deployed on Vercel.",
+      inDepthDescription: [
+        "Tracks job applications and generates AI-driven resumes tailored to job descriptions.",
+        "Users upload resumes, which are optimized via OpenAI API and saved in the database.",
+        "Customizes resumes based on specific job requirements and generates downloadable PDFs.",
+      ],
       techStack: "Next.js, Typescript, Tailwind, MongoDB, OpenAI API",
       usefulness:
         "Streamlines the job application process and enhances resume customization.",
       developmentProcess:
-        "The project involved creating a user-friendly interface with React and handling backend operations with Node.js and MongoDB. The OpenAI API was used for AI-driven resume tailoring.",
+        "Built with Next.js and MongoDB. Puppeteer is used for screenshot capture and PDF generation.",
       videoUrl: "https://youtu.be/tasZs_QQkdo",
       gitHub: "https://github.com/jaredvgraham/apply-frame",
     },
     {
-      id: 3,
+      id: 4,
       title: "My Freelancing Website",
       url: "https://www.bsites.io/",
       imgSrc: "/bsites.png",
       description: "My freelance web development website",
-      inDepthDescription:
-        "A bussiness my friend and I started to help clients with their web development needs. We offer a variety of services including web design, web development, and SEO optimization all they can purchase directly from the website using Stripe.",
+      inDepthDescription: [
+        "A website offering web development services such as web design, development, and SEO optimization.",
+        "Integrated with Stripe for clients to directly purchase services.",
+        "Includes case studies and portfolio sections to showcase previous work.",
+      ],
       techStack: "Next.js, Tailwind CSS, MongoDB, Stripe",
       usefulness:
-        "Helps potential clients learn about my services and see examples of my work.",
+        "Helps potential clients learn about services and purchase them directly online.",
       developmentProcess:
-        "Built with Next.js for server-side rendering and Tailwind CSS for styling. Deployed on Vercel for optimized performance and scalability.",
-
+        "Built with Next.js for server-side rendering and Stripe for payment integration.",
       gitHub: "https://github.com/jaredvgraham/top-of-the-web",
     },
     {
-      id: 4,
+      id: 5,
       title: "Dating App (Not Live)",
-
       imgSrc: "/dating-app.png",
-      description:
-        "A dating app with a matching algorithm but the app is not live",
-      inDepthDescription:
-        "A dating app designed with a unique matching algorithm to connect compatible users.",
+      description: "A dating app with a matching algorithm (not live)",
+      inDepthDescription: [
+        "Designed with a unique matching algorithm to connect users based on preferences.",
+        "Includes profile creation, matching, and communication features.",
+      ],
       techStack: "React, PostgreSQL, Spring Boot, Java",
       usefulness: "Enhances user experience in finding compatible matches.",
       developmentProcess:
-        "This app I built with a friend I wrote the front end in React and he wrote the back end in Java using Spring Boot. We used a PostgreSQL database to store user information and match them based on their preferences.",
-
+        "Developed the front end in React and back end with Java Spring Boot. PostgreSQL was used for data storage.",
       gitHub: "https://github.com/jaredvgraham/dating-app",
     },
-    // {
-    //   id: 5,
-    //   title: "Car Detailing Website",
-    //   url: "https://www.jakecleanscars.com/",
-    //   imgSrc: "/jake.png",
-    //   description: "A car detailing website I built for a client",
-    //   inDepthDescription:
-    //     "A professional website for a car detailing business, showcasing services and allowing online bookings.",
-    //   techStack: "Next.js, Tailwind CSS",
-    //   usefulness:
-    //     "Increases online presence and allows customers to book detailing services online.",
-    //   developmentProcess:
-    //     "Developed with Next.js for server-side rendering and Tailwind CSS for styling. Deployed on Vercel for optimized performance and scalability.",
-
-    //   gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
-    // },
   ];
 
   return (
@@ -152,7 +169,13 @@ const ProjectsPage = () => {
             <h3 className="text-2xl font-semibold mb-2">
               In-Depth Description
             </h3>
-            <p className="text-gray-400 mb-4">{project.inDepthDescription}</p>
+            <ul className="text-gray-400 mb-4 p-4">
+              {project.inDepthDescription.map((item, i) => (
+                <li className="list-disc mt-2" key={i}>
+                  {item}
+                </li>
+              ))}
+            </ul>
             <h3 className="text-2xl font-semibold mb-2">Tech Stack</h3>
             <p className="text-gray-400 mb-4">{project.techStack}</p>
             <h3 className="text-2xl font-semibold mb-2">Usefulness</h3>

@@ -42,8 +42,10 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black`}>
         <Navbar />
         <Analytics /> {/* Include the Analytics component here */}
-        {children}
-        <Footer />
+        <div className="w-full h-screen overflow-y-scroll overflow-x-hidden">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
