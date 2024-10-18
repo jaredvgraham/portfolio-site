@@ -14,7 +14,7 @@ const projectLinks = [
     id: 1,
     title: "Sales Prospecting SAAS",
     url: "https://sale-sphere.vercel.app/",
-    imgSrc: "/sales.png",
+    imgSrc: "/saless.png",
     description: "A sales prospecting SAAS with AI integration",
     videoUrl: "https://youtu.be/UlgvA3kXimU",
     gitHub: "https://github.com/jaredvgraham/SaleSphere",
@@ -95,7 +95,7 @@ const ProjectItem = ({ project, index }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="relative bg-white white-shadow-lg rounded-lg shadow-lg overflow-hidden"
+      className="relative bg-white white-shadow-lg rounded-lg shadow-lg overflow-hidden w-[400px] h-[210px]"
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={itemVariants}
@@ -108,7 +108,7 @@ const ProjectItem = ({ project, index }: Props) => {
           src={project.imgSrc}
           alt={project.title}
           width={400}
-          height={200}
+          height={500}
           className="rounded-lg"
         />
       </div>
