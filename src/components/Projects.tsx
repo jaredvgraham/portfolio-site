@@ -95,7 +95,7 @@ const ProjectItem = ({ project, index }: Props) => {
   return (
     <motion.div
       ref={ref}
-      className="relative bg-white white-shadow-lg rounded-lg shadow-lg overflow-hidden w-[400px] h-[210px]"
+      className="relative bg-white white-shadow-lg rounded-lg shadow-lg overflow-hidden sm:w-[370px] md:w-[400px]  h-[210px]"
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={itemVariants}
