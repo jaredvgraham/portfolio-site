@@ -90,18 +90,25 @@ const ProjectsPage = () => {
     },
     {
       id: 5,
-      title: "Dating App (Not Live)",
-      imgSrc: "/dating-app.png",
-      description: "A dating app with a matching algorithm (not live)",
+      title: "Raet Dating App (In Review)",
+      imgSrc: "/raet-dating-app.png",
+      description:
+        "A unique dating app designed to enhance match quality and streamline the dating process.",
       inDepthDescription: [
-        "Designed with a unique matching algorithm to connect users based on preferences.",
-        "Includes profile creation, matching, and communication features.",
+        "Utilizes a unique group-based matching system, where users are grouped by ratings given by the community. This allows users to find high-quality matches more quickly.",
+        "The rating system lets users provide feedback on profiles they interact with, helping to categorize people based on overall compatibility and interactions.",
+        "This system improves the experience by reducing the time spent on incompatible matches, and connecting users with profiles that align with their preferences and community ratings.",
+        "Features real-time chat, allowing matched users to connect instantly, fostering better engagement and connection-building.",
+        "Integrates content moderation tools including flagging and blocking for a safer experience.",
+        "Provides an intuitive interface for seamless profile creation and navigation.",
       ],
-      techStack: "React, PostgreSQL, Spring Boot, Java",
-      usefulness: "Enhances user experience in finding compatible matches.",
+      techStack:
+        "React Native, Expo, Node.js, Express.js, TypeScript, Tailwind CSS, Clerk Auth, Firebase Real-time Database, MongoDB",
+      usefulness:
+        "Enhances dating efficiency by allowing community-driven ratings to guide matching, creating a safer and more meaningful experience.",
       developmentProcess:
-        "Developed the front end in React and back end with Java Spring Boot. PostgreSQL was used for data storage.",
-      gitHub: "https://github.com/jaredvgraham/dating-app",
+        "Built using React Native and Expo for mobile, with a Node.js and Express backend. Firebase Real-time Database supports secure data storage and live updates.",
+      gitHub: "https://github.com/jaredvgraham/raet",
     },
   ];
 
