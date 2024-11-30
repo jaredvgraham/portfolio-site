@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image"; // Using Next.js Image component for optimization
+import { url } from "inspector";
 
 const ProjectsPage = () => {
   const projectLinks = [
@@ -90,8 +91,9 @@ const ProjectsPage = () => {
     },
     {
       id: 5,
-      title: "Raet Dating App (In Review)",
+      title: "Raet Dating App",
       imgSrc: "/raet-dating-app.png",
+      url: "https://raet.io",
       description:
         "A unique dating app designed to enhance match quality and streamline the dating process.",
       inDepthDescription: [

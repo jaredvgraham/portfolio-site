@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image"; // Import Next.js Image component
+import { url } from "inspector";
 
 const itemVariants = {
   hidden: { opacity: 0, x: 100 },
@@ -48,13 +49,12 @@ const projectLinks = [
   },
   {
     id: 4,
-    title: "Dating App (Not Live)",
-
+    title: "Dating App",
+    url: "https://raet.io/",
     imgSrc: "/dating-app.png",
-    description:
-      "A dating app with a matching algorithm but the app is not live",
+    description: "A dating app with a matching algorithm.",
 
-    gitHub: "https://github.com/jaredvgraham/dating-app",
+    gitHub: "https://github.com/jaredvgraham/raet",
   },
   // {
   //   id: 5,
