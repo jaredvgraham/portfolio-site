@@ -28,8 +28,8 @@ const ProjectsPage = () => {
         "Enhances sales prospecting by automating company discovery and outreach.",
       developmentProcess:
         "Built with Next.js, Firestore for database, and integrated with Stripe for payments.",
-      videoUrl: "https://youtu.be/UlgvA3kXimU",
-      gitHub: "https://github.com/jaredvgraham/bizzyTask",
+
+      gitHub: "https://github.com/jaredvgraham/SaleSphere",
     },
     {
       id: 2,
