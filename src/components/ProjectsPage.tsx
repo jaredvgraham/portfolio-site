@@ -32,6 +32,29 @@ const ProjectsPage = () => {
       gitHub: "https://github.com/jaredvgraham/SaleSphere",
     },
     {
+      id: 5,
+      title: "Raet Dating App",
+      imgSrc: "/dating-app.png",
+      url: "https://raet.io",
+      description:
+        "A unique dating app designed to enhance match quality and streamline the dating process.",
+      inDepthDescription: [
+        "Utilizes a unique group-based matching system, where users are grouped by ratings given by the community. This allows users to find high-quality matches more quickly.",
+        "The rating system lets users provide feedback on profiles they interact with, helping to categorize people based on overall compatibility and interactions.",
+        "This system improves the experience by reducing the time spent on incompatible matches, and connecting users with profiles that align with their preferences and community ratings.",
+        "Features real-time chat, allowing matched users to connect instantly, fostering better engagement and connection-building.",
+        "Integrates content moderation tools including flagging and blocking for a safer experience.",
+        "Provides an intuitive interface for seamless profile creation and navigation.",
+      ],
+      techStack:
+        "React Native, Expo, Node.js, Express.js, TypeScript, Tailwind CSS, Clerk Auth, Firebase Real-time Database, MongoDB",
+      usefulness:
+        "Enhances dating efficiency by allowing community-driven ratings to guide matching, creating a safer and more meaningful experience.",
+      developmentProcess:
+        "Built using React Native and Expo for mobile, with a Node.js and Express backend. Firebase Real-time Database supports secure data storage and live updates.",
+      gitHub: "https://github.com/jaredvgraham/raet",
+    },
+    {
       id: 2,
       title: "Business Task Manager",
       url: "https://bizzy-task.vercel.app/",
@@ -88,29 +111,6 @@ const ProjectsPage = () => {
       developmentProcess:
         "Built with Next.js for server-side rendering and Stripe for payment integration.",
       gitHub: "https://github.com/jaredvgraham/top-of-the-web",
-    },
-    {
-      id: 5,
-      title: "Raet Dating App",
-      imgSrc: "/raet-dating-app.png",
-      url: "https://raet.io",
-      description:
-        "A unique dating app designed to enhance match quality and streamline the dating process.",
-      inDepthDescription: [
-        "Utilizes a unique group-based matching system, where users are grouped by ratings given by the community. This allows users to find high-quality matches more quickly.",
-        "The rating system lets users provide feedback on profiles they interact with, helping to categorize people based on overall compatibility and interactions.",
-        "This system improves the experience by reducing the time spent on incompatible matches, and connecting users with profiles that align with their preferences and community ratings.",
-        "Features real-time chat, allowing matched users to connect instantly, fostering better engagement and connection-building.",
-        "Integrates content moderation tools including flagging and blocking for a safer experience.",
-        "Provides an intuitive interface for seamless profile creation and navigation.",
-      ],
-      techStack:
-        "React Native, Expo, Node.js, Express.js, TypeScript, Tailwind CSS, Clerk Auth, Firebase Real-time Database, MongoDB",
-      usefulness:
-        "Enhances dating efficiency by allowing community-driven ratings to guide matching, creating a safer and more meaningful experience.",
-      developmentProcess:
-        "Built using React Native and Expo for mobile, with a Node.js and Express backend. Firebase Real-time Database supports secure data storage and live updates.",
-      gitHub: "https://github.com/jaredvgraham/raet",
     },
   ];
 

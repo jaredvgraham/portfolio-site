@@ -17,8 +17,17 @@ const projectLinks = [
     url: "https://sale-sphere.vercel.app/",
     imgSrc: "/saless.png",
     description: "A sales prospecting SAAS with AI integration",
-    videoUrl: "https://youtu.be/UlgvA3kXimU",
+
     gitHub: "https://github.com/jaredvgraham/SaleSphere",
+  },
+  {
+    id: 4,
+    title: "Dating App",
+    url: "https://raet.io/",
+    imgSrc: "/dating-app.png",
+    description: "A dating app with a matching algorithm.",
+
+    gitHub: "https://github.com/jaredvgraham/raet",
   },
   {
     id: 2,
@@ -47,15 +56,7 @@ const projectLinks = [
 
     gitHub: "https://github.com/jaredvgraham/top-of-the-web",
   },
-  {
-    id: 4,
-    title: "Dating App",
-    url: "https://raet.io/",
-    imgSrc: "/dating-app.png",
-    description: "A dating app with a matching algorithm.",
 
-    gitHub: "https://github.com/jaredvgraham/raet",
-  },
   // {
   //   id: 5,
   //   title: "Car Detailing Website",
