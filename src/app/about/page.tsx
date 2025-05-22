@@ -57,7 +57,7 @@ const AboutPage = () => {
           <h2 className="text-3xl font-semibold text-gray-300">Recent Work</h2>
           <p className="text-lg mt-4 text-gray-400">
             In my recent work, I&apos;ve developed a dating app that utilizes a
-            unuique algorithm to match users based on their ratings they
+            unuique algorithm to match users based on their ratings they have
             obtained from other users. This project not only showcases my
             technical skills but also my ability to create innovative solutions
             that enhance user experience. I am constantly seeking new challenges
