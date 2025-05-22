@@ -98,15 +98,14 @@ const ScrollAnimationPage = () => {
                   } overflow-hidden relative`}
                   >
                     <p className="text-slate-300">
-                      I&apos;m Jared, a frontend developer with a habit of
-                      creating full-stack applications using Next.js. My
-                      expertise lies in both frontend and backend development,
-                      allowing me to craft seamless, dynamic, and
-                      high-performance web applications. I have a strong passion
-                      for creating visually appealing and user-friendly
-                      interfaces that are not only functional but also
-                      aesthetically pleasing. My proficiency in modern web
-                      technologies and my ability to implement AI solutions
+                      I&apos;m Jared, a full-stack developer creating
+                      applications using Next.js. My expertise lies in both
+                      frontend and backend development, allowing me to craft
+                      seamless, dynamic, and high-performance web applications.
+                      I have a strong passion for creating visually appealing
+                      and user-friendly interfaces that are not only functional
+                      but also aesthetically pleasing. My proficiency in modern
+                      web technologies and my ability to implement AI solutions
                       using APIs like ChatGPT make me a versatile and innovative
                       developer.
                     </p>
