@@ -117,9 +117,7 @@ const AboutPage = () => {
           <h2 className="text-3xl font-semibold text-gray-300">
             Let&apos;s Connect
           </h2>
-          <p className="text-lg mt-4 text-gray-400">
-            Let&apos;s create something amazing together!
-          </p>
+          <p className="text-lg mt-4 text-gray-400">Let&apos;s build!</p>
           <ul className="mt-2">
             <li>Email: jaredvgraham@gmail.com</li>
             <a href="tel:7813367247">
