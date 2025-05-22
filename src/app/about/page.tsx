@@ -41,7 +41,7 @@ const AboutPage = () => {
           <p className="text-lg mt-4 text-gray-400">
             I&apos;m a passionate web developer with a deep love for creating
             seamless, dynamic web applications. I have worked relentlessly to
-            hone my skills in HTML, CSS, JavaScript, and Next.js, building a
+            hone my skills in Next.js, MongoDb, and Tailwind building a
             portfolio that showcases my ability to tackle both frontend and
             backend development with proficiency.
           </p>
@@ -56,12 +56,13 @@ const AboutPage = () => {
         >
           <h2 className="text-3xl font-semibold text-gray-300">Recent Work</h2>
           <p className="text-lg mt-4 text-gray-400">
-            In my recent work, I&apos;ve developed a full-stack business task
-            management app using Next.js, demonstrating my knowlage for creating
-            user-friendly, efficient web applications. I&apos;ve also integrated
-            AI-powered features into various projects, like the task managment
-            app, and my job application management tool, which streamlines and
-            enhances the job search process.
+            In my recent work, I&apos;ve developed a dating app that utilizes a
+            unuique algorithm to match users based on their ratings they
+            obtained from other users. This project not only showcases my
+            technical skills but also my ability to create innovative solutions
+            that enhance user experience. I am constantly seeking new challenges
+            and opportunities to push the boundaries of what I can achieve in
+            web development.
           </p>
         </motion.section>
 
