@@ -38,6 +38,7 @@ export default function RootLayout({
             `,
           }}
         />
+     <script src="https://whorefback.onrender.com/tracker.js?site-key=eafb72ca-df9b-4447-8859-02bda11316bc" defer></script>
       </head>
       <body className={`${inter.className} bg-black`}>
         <Navbar />
