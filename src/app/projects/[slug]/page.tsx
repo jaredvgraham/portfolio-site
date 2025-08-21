@@ -39,7 +39,7 @@ const ProjectDetailPage = () => {
             Project Not Found
           </h1>
           <button
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push("/#projects")}
             className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-300"
           >
             Back to Projects
@@ -70,7 +70,7 @@ const ProjectDetailPage = () => {
         className="relative z-10 p-6"
       >
         <button
-          onClick={() => router.push("/projects")}
+          onClick={() => router.push("/#projects")}
           className="inline-flex items-center space-x-2 text-gray-400 hover:text-teal-400 transition-colors duration-300 mb-8"
         >
           <FaArrowLeft className="w-4 h-4" />
@@ -323,7 +323,7 @@ const ProjectDetailPage = () => {
               </a>
             )}
             <a
-              href="/projects"
+              href="/#projects"
               className="inline-flex items-center space-x-2 bg-gray-800/80 backdrop-blur-sm border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-700/80 hover:border-gray-500 transition-all duration-300 font-medium transform hover:scale-105"
             >
               <FaArrowLeft className="w-5 h-5" />

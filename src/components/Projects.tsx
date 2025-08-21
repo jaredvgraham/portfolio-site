@@ -262,21 +262,6 @@ const Projects = () => {
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <a
-            href="/projects"
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-gray-800/80 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-xl hover:bg-gray-700/80 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
-          >
-            <span>View All Projects</span>
-            <FaArrowRight className="text-sm" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
