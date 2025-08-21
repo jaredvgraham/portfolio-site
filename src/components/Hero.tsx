@@ -78,7 +78,7 @@ const Hero = () => {
               <FaEnvelope className="text-lg md:text-xl" />
             </a>
             <a
-              href="https://linkedin.com/in/jaredvgraham"
+              href="https://www.linkedin.com/in/jared-graham-0416b62a7/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 md:w-12 md:h-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full flex items-center justify-center text-gray-300 hover:bg-indigo-500/20 hover:border-indigo-500/50 hover:text-indigo-400 transition-all duration-300 hover:scale-110"
