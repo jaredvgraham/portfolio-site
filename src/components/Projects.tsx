@@ -2,185 +2,275 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image"; // Import Next.js Image component
-import { url } from "inspector";
+import Image from "next/image";
+import {
+  FaExternalLinkAlt,
+  FaGithub,
+  FaPlay,
+  FaArrowRight,
+} from "react-icons/fa";
 
-const itemVariants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut" } },
-};
-
-const projectLinks = [
+export const projects = [
   {
     id: 1,
-    title: "Sales Prospecting SAAS",
-    url: "https://sale-sphere.vercel.app/",
-    imgSrc: "/saless.png",
-    description: "A sales prospecting SAAS with AI integration",
+    title: "Sonexa - AI-Powered Lyric Video Maker",
+    description:
+      "A comprehensive AI-powered platform that transforms audio and video content into engaging, professionally-styled lyric videos and captions. Features automatic transcription, beat-synchronized lyrics, and professional video rendering with Remotion framework.",
+    image: "/sonexa-placeholder.png",
+    liveUrl: "https://sonexa.cc",
 
-    gitHub: "https://github.com/jaredvgraham/SaleSphere",
-  },
-  {
-    id: 4,
-    title: "Dating App",
-    url: "https://raet.io/",
-    imgSrc: "/dating-app.png",
-    description: "A dating app with a matching algorithm.",
-
-    gitHub: "https://github.com/jaredvgraham/raet",
+    videoUrl: null,
+    technologies: [
+      "Next.js 15",
+      "React 19",
+      "AI Integration",
+      "Video Processing",
+      "Remotion",
+      "OpenAI Whisper",
+      "Real-time Collaboration",
+    ],
+    category: "AI/Enterprise",
   },
   {
     id: 2,
-    title: "Business Task Manager",
-    url: "https://bizzy-task.vercel.app/",
-    imgSrc: "/bizzy-task.png",
-    description: "A task management app with AI integration",
-    videoUrl: "https://youtu.be/UlgvA3kXimU",
-    gitHub: "https://github.com/jaredvgraham/bizzyTask",
+    title: "Pilotype - AI Browser Autocomplete",
+    description:
+      "A sophisticated browser extension that provides intelligent AI-powered text autocompletion across any website. Features real-time suggestions, context-aware AI, memory-based personalization, and seamless integration with OpenAI and Google Gemini.",
+    image: "/pilotype-placeholder.png",
+    liveUrl: "https://pilotype.io",
+
+    videoUrl: "https://www.youtube.com/watch?v=fzec6n9ONtM",
+    technologies: [
+      "Next.js 15",
+      "React 19",
+      "Browser Extension",
+      "Plasmo Framework",
+      "OpenAI GPT-4",
+      "Google Gemini",
+      "MongoDB",
+      "Stripe Integration",
+    ],
+    category: "AI/Productivity",
   },
-  {
-    id: 2,
-    title: "Job Application Tracker",
-    url: "https://apply-frame.vercel.app/",
-    imgSrc: "/applyFrame.png",
-    description: "A job application tracker and AI resume builder/tailoring",
-    videoUrl: "https://youtu.be/tasZs_QQkdo",
-    gitHub: "https://github.com/jaredvgraham/apply-frame",
-  },
+
   {
     id: 3,
-    title: "My Freelancing Website",
-    url: "https://www.bsites.io/",
-    imgSrc: "/bsites.png",
-    description: "My freelance web development website",
-
-    gitHub: "https://github.com/jaredvgraham/top-of-the-web",
-  },
-
-  // {
-  //   id: 5,
-  //   title: "Car Detailing Website",
-  //   url: "https://www.jakecleanscars.com/",
-  //   imgSrc: "/jake.png",
-  //   description: "A car detailing website I built for a client",
-
-  //   gitHub: "https://github.com/evanwilson2123/JakeCleansCars",
-  // },
-  {
-    id: 6,
-    title: "Learn More",
-    url: "/projects",
-    imgSrc: "/read-more.png",
-    description: "Read more about my projects",
-    videoUrl: "/projects",
-    gitHub: "/projects",
+    title: "Dating App",
+    description:
+      "A sophisticated dating application featuring a unique matching algorithm based on user ratings and preferences. Includes real-time messaging and advanced filtering.",
+    image: "/dating-app.png",
+    liveUrl: "https://raet.io/",
+    githubUrl: "https://github.com/jaredvgraham/raet",
+    videoUrl: null,
+    technologies: ["React", "Node.js", "MongoDB", "Real-time"],
+    category: "Full-Stack",
   },
 ];
-type Props = {
-  project: {
-    id: number;
-    title: string;
-    url?: string;
-    imgSrc: string;
-    description: string;
-    videoUrl?: string | null;
-    gitHub: string;
-  };
-  index: number;
-};
 
-const ProjectItem = ({ project, index }: Props) => {
+const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [hovered, setHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <motion.div
       ref={ref}
-      className="relative bg-white white-shadow-lg rounded-lg shadow-lg overflow-hidden sm:w-[370px] md:w-[400px]  h-[210px]"
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={itemVariants}
-      transition={{ delay: index * 0.2 }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden hover:bg-gray-800/70 transition-all duration-500"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative w-full h-full">
+      {/* Project Image */}
+      <div className="relative h-64 overflow-hidden">
         <Image
-          src={project.imgSrc}
+          src={project.image}
           alt={project.title}
-          width={400}
-          height={500}
-          className="rounded-lg"
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
-      </div>
-      {hovered && (
-        <div className="absolute inset-0 bg-black bg-opacity-85 flex flex-col justify-center items-center text-white p-4">
-          <h2 className="text-xl mb-2">{project.title}</h2>
-          <p className="mb-4 text-center">{project.description}</p>
-          <div className="flex space-x-4">
-            <ul className="flex space-x-4 mb-5">
-              <li>
-                {project.url && (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Live Site
-                  </a>
-                )}
-              </li>
-              <li>
-                {project.videoUrl && (
-                  <a
-                    href={project.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Video Demo
-                  </a>
-                )}
-              </li>
-              <li>
-                <a
-                  href={project.gitHub}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  GitHub
-                </a>
-              </li>
-            </ul>
-          </div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4">
+          <span
+            className={`px-3 py-1 text-white text-xs font-medium rounded-full ${
+              project.category === "AI/Enterprise"
+                ? "bg-emerald-600/90"
+                : project.category === "AI/Productivity"
+                ? "bg-amber-500/90"
+                : project.category === "Full-Stack"
+                ? "bg-teal-600/90"
+                : "bg-rose-500/90"
+            }`}
+          >
+            {project.category}
+          </span>
         </div>
-      )}
-      <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-2">
-        <h2 className="text-gray-800 text-center">{project.title}</h2>
+
+        {/* Action Buttons */}
+        <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full flex items-center justify-center text-white hover:bg-teal-700/30 hover:border-teal-700/50 transition-all duration-300"
+            >
+              <FaExternalLinkAlt className="text-sm" />
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full flex items-center justify-center text-white hover:bg-indigo-500/30 hover:border-indigo-500/50 transition-all duration-300"
+            >
+              <FaGithub className="text-sm" />
+            </a>
+          )}
+          {project.videoUrl && (
+            <a
+              href={project.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-500/30 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <FaPlay className="text-sm" />
+            </a>
+          )}
+        </div>
+      </div>
+
+      {/* Project Content */}
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-teal-300 transition-colors duration-300">
+          <a
+            href={`/projects/${project.title
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/^-+|-+$/g, "")}`}
+            className="hover:text-teal-300 transition-colors duration-300"
+          >
+            {project.title}
+          </a>
+        </h3>
+
+        <div className="mb-4">
+          <p
+            className={`text-gray-300 text-sm leading-relaxed transition-all duration-300 ${
+              isExpanded ? "" : "line-clamp-3"
+            }`}
+          >
+            {project.description}
+          </p>
+
+          {project.description.length > 150 && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-teal-300 hover:text-teal-200 text-xs font-medium mt-2 transition-colors duration-300 flex items-center space-x-1"
+            >
+              <span>{isExpanded ? "Read Less" : "Read More"}</span>
+              <motion.div
+                animate={{ rotate: isExpanded ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <svg
+                  className="w-3 h-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </motion.div>
+            </button>
+          )}
+        </div>
+
+        {/* Technologies */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.technologies.map((tech: string, idx: number) => (
+            <span
+              key={idx}
+              className="px-2 py-1 bg-gray-800/50 text-gray-300 text-xs rounded-md border border-gray-700"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* View Project Button */}
+        <div className="flex items-center justify-between">
+          <a
+            href={`/projects/${project.title
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/^-+|-+$/g, "")}`}
+            className="inline-flex items-center space-x-2 text-teal-300 hover:text-teal-200 transition-colors duration-300 group/btn"
+          >
+            <span className="text-sm font-medium">View Details</span>
+            <FaArrowRight className="text-xs group-hover/btn:translate-x-1 transition-transform duration-300" />
+          </a>
+        </div>
       </div>
     </motion.div>
   );
 };
 
 const Projects = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
   return (
-    <div className="flex flex-col items-center p-10">
-      <motion.h1
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="text-white text-center mb-10 text-3xl"
-      >
-        My Apps
-      </motion.h1>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
-        {projectLinks.map((project, index) => (
-          <ProjectItem key={project.id} project={project} index={index} />
-        ))}
+    <section id="projects" className="py-20 px-4" ref={ref}>
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Featured Projects
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Here are some of my recent projects that demonstrate my skills in
+            full-stack development, AI integration, and creating exceptional
+            user experiences.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-center mt-16"
+        >
+          <a
+            href="/projects"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-gray-800/80 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-xl hover:bg-gray-700/80 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
+          >
+            <span>View All Projects</span>
+            <FaArrowRight className="text-sm" />
+          </a>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Jared Graham is a frontend / full-stack developer based in Boston, MA.",
 };
-
+//
 export default function RootLayout({
   children,
 }: Readonly<{
