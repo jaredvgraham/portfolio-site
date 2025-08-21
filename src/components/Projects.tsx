@@ -62,7 +62,15 @@ export const projects = [
     liveUrl: "https://raet.io/",
     githubUrl: "https://github.com/jaredvgraham/raet",
     videoUrl: null,
-    technologies: ["React", "Node.js", "MongoDB", "Real-time"],
+    technologies: [
+      "React Native",
+      "Expo",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "Real-time",
+      "Typescript",
+    ],
     category: "Full-Stack",
   },
 ];
