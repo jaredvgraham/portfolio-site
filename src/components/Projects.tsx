@@ -75,7 +75,7 @@ export const projects = [
       "Real-time",
       "Typescript",
     ],
-    category: "Full-Stack",
+    category: "Mobile/Dating",
   },
 ];
 
@@ -111,12 +111,12 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
           <span
             className={`px-3 py-1 text-white text-xs font-medium rounded-full ${
               project.category === "AI/Enterprise"
-                ? "bg-emerald-600/90"
+                ? "bg-black"
                 : project.category === "AI/Productivity"
-                ? "bg-amber-500/90"
-                : project.category === "Full-Stack"
-                ? "bg-teal-600/90"
-                : "bg-rose-500/90"
+                ? "bg-black"
+                : project.category === "Mobile/Dating"
+                ? "bg-black"
+                : "bg-black"
             }`}
           >
             {project.category}
